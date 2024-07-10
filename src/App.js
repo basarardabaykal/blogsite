@@ -1,10 +1,11 @@
 import "./App.css"
 import Home from "./pages/Home"
+import Article from "./pages/Article"
 
 function App() {
   return (
     <div>
-      <Home></Home>
+      <Article></Article>
     </div>
   )
 }
