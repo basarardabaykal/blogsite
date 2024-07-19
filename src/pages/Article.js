@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar"
+import { Link } from "react-router-dom"
 import Video from "../components/Video"
 import ImgWithText from "../components/ImgWithText"
 import maruo from "../assets/maruo.png"
@@ -6,13 +6,11 @@ import paranoiaStar from "../assets/paraniostar.jpg"
 import actors from "../assets/actors.png"
 import play1986 from "../assets/1986.jpg"
 import litchiManga from "../assets/litchimanga.jpg"
-import { act } from "react"
 
 function Article() {
   return (
-    <div>
-      <Navbar></Navbar>
-      <main className="flex flex-col justify-center text-center mb-16">
+    <div className="bg-yellow-50">
+      <main className="flex flex-col justify-center text-center pb-36">
         <div
           id="introduction"
           className="flex flex-col justify-center text-center text-xl self-center w-3/5"
@@ -171,7 +169,11 @@ function Article() {
           <p className="text-left mb-8">
             And that is all to cover about this series. I hope you enjoyed the
             read and if I missed anything or any of the links are not working,
-            feel free to contact me.
+            feel free to{" "}
+            <Link to="/contact" className="font-bold">
+              contact me
+            </Link>
+            .
           </p>
         </div>
       </main>

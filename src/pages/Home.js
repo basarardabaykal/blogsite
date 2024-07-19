@@ -1,12 +1,11 @@
-import Navbar from "../components/Navbar"
+import { Link } from "react-router-dom"
 import raichi from "../assets/raichi.jpg"
 
 function Home() {
   return (
-    <div className="bg-amber-100 pb-20">
-      <Navbar></Navbar>
+    <div className="pb-20 pt-4 bg-yellow-50">
       <main className="text-center ">
-        <section id="introduction" className="text-xl my-72">
+        <section id="introduction" className="text-xl mt-64 mb-72">
           <p>
             Hi! In this website, I write about obscure and region locked
             fictional works including manga, anime and books.
@@ -30,6 +29,14 @@ function Home() {
                 origin, history, works that have influenced it and the works it
                 has influenced.
               </p>
+              <Link
+                to="/litchi-hikari-club"
+                className="absolute right-80 mt-12"
+              >
+                <p className="font-bold border-2 rounded-md border-black h-8 w-20 flex items-center justify-center">
+                  Read
+                </p>
+              </Link>
             </div>
           </div>
         </section>
