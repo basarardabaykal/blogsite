@@ -7,13 +7,13 @@ import actors from "../assets/actors.png"
 import play1986 from "../assets/1986.jpg"
 import litchiManga from "../assets/litchimanga.jpg"
 
-function Article() {
+function Litchi() {
   return (
-    <div className="bg-yellow-50">
-      <main className="flex flex-col justify-center text-center pb-36">
+    <div className="bg-yellow-50 flex justify-center">
+      <main className="flex flex-col justify-center text-center pb-36 lg:w-3/5 w-4/5">
         <div
           id="introduction"
-          className="flex flex-col justify-center text-center text-xl self-center w-3/5"
+          className="flex flex-col justify-center text-center text-xl self-center "
         >
           <header className="text-3xl mt-32 mb-24">Litchi Hikari Club</header>
           <p className="text-left">
@@ -29,9 +29,9 @@ function Article() {
         </div>
         <div
           id="1985"
-          className="flex flex-col justify-center text-center text-xl self-center w-3/5"
+          className="flex flex-col justify-center text-center text-xl self-center w-full"
         >
-          <header className="text-2xl mt-24 mb-16">
+          <header className="text-2xl lg:mt-24 mt-16 mb-16">
             1985 Opening Act (Mercuro)
           </header>
           <p className="text-left mb-8">
@@ -69,9 +69,11 @@ function Article() {
         </div>
         <div
           id="1986"
-          className="flex flex-col justify-center text-center text-xl self-center w-3/5"
+          className="flex flex-col justify-center text-center text-xl self-center"
         >
-          <header className="text-2xl mt-24 mb-16">1986 Theater Play</header>
+          <header className="text-2xl lg:mt-24 mt-16 mb-16">
+            1986 Theater Play
+          </header>
           <p className="text-left mb-8">
             After one year, Tokyo Grand Guignol Theater Troupe performed their
             main play, Litchi Hikari Club. This play was not recorded and all
@@ -99,9 +101,11 @@ function Article() {
         </div>
         <div
           id="manga"
-          className="flex flex-col justify-center text-center text-xl self-center w-3/5"
+          className="flex flex-col justify-center text-center text-xl self-center "
         >
-          <header className="text-2xl mt-24 mb-16">Manga Adaptations</header>
+          <header className="text-2xl lg:mt-24 mt-16 mb-16">
+            Manga Adaptations
+          </header>
           <p className="text-left mb-8">
             Furuya Usamaru adapted the series into a two-volume manga with the
             name "Litchi Hikari Club", publishing from 2005 to 2006 and later a
@@ -123,9 +127,11 @@ function Article() {
         </div>
         <div
           id="others"
-          className="flex flex-col justify-center text-center text-xl self-center w-3/5"
+          className="flex flex-col justify-center text-center text-xl self-center "
         >
-          <header className="text-2xl mt-24 mb-16">Other Adaptations</header>
+          <header className="text-2xl lg:mt-24 mt-16 mb-16">
+            Other Adaptations
+          </header>
           <p className="text-left mb-8">
             After the manga adaptation's huge success, the series got very
             popular. Many adaptations in various forms were made. They are
@@ -164,13 +170,13 @@ function Article() {
         </div>
         <div
           id="conclusion"
-          className="flex flex-col justify-center text-center text-xl self-center w-3/5 mt-20"
+          className="flex flex-col justify-center text-center text-xl self-center mt-20"
         >
           <p className="text-left mb-8">
             And that is all to cover about this series. I hope you enjoyed the
             read and if I missed anything or any of the links are not working,
             feel free to{" "}
-            <Link to="/contact" className="font-bold">
+            <Link to="/contact" className="font-bold underline">
               contact me
             </Link>
             .
@@ -181,4 +187,4 @@ function Article() {
   )
 }
 
-export default Article
+export default Litchi
