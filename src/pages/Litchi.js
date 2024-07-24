@@ -9,13 +9,13 @@ import litchiManga from "../assets/litchimanga.jpg"
 
 function Litchi() {
   return (
-    <div className="bg-yellow-50 flex justify-center">
+    <div className="bg-yellow-50 dark:bg-black dark:text-yellow-50 flex justify-center lg:text-xl text-lg">
       <main className="flex flex-col justify-center text-center pb-36 lg:w-3/5 w-4/5">
         <div
           id="introduction"
-          className="flex flex-col justify-center text-center text-xl self-center "
+          className="flex flex-col justify-center text-center self-center "
         >
-          <header className="text-3xl mt-32 mb-24">Litchi Hikari Club</header>
+          <header className="text-3xl mt-32 mb-20">Litchi Hikari Club</header>
           <p className="text-left">
             Litchi Hikari Club is a unique work of art which has found its place
             in various forms of art such as theater plays, musicals, movies,
@@ -29,9 +29,9 @@ function Litchi() {
         </div>
         <div
           id="1985"
-          className="flex flex-col justify-center text-center text-xl self-center w-full"
+          className="flex flex-col justify-center text-center self-center w-full"
         >
-          <header className="text-2xl lg:mt-24 mt-16 mb-16">
+          <header className="text-2xl lg:mt-24 mt-20 lg:mb-16 mb-12">
             1985 Opening Act (Mercuro)
           </header>
           <p className="text-left mb-8">
@@ -69,7 +69,7 @@ function Litchi() {
         </div>
         <div
           id="1986"
-          className="flex flex-col justify-center text-center text-xl self-center"
+          className="flex flex-col justify-center text-center self-center"
         >
           <header className="text-2xl lg:mt-24 mt-16 mb-16">
             1986 Theater Play
@@ -101,7 +101,7 @@ function Litchi() {
         </div>
         <div
           id="manga"
-          className="flex flex-col justify-center text-center text-xl self-center "
+          className="flex flex-col justify-center text-center self-center "
         >
           <header className="text-2xl lg:mt-24 mt-16 mb-16">
             Manga Adaptations
@@ -127,7 +127,7 @@ function Litchi() {
         </div>
         <div
           id="others"
-          className="flex flex-col justify-center text-center text-xl self-center "
+          className="flex flex-col justify-center text-center self-center "
         >
           <header className="text-2xl lg:mt-24 mt-16 mb-16">
             Other Adaptations
@@ -170,7 +170,7 @@ function Litchi() {
         </div>
         <div
           id="conclusion"
-          className="flex flex-col justify-center text-center text-xl self-center mt-20"
+          className="flex flex-col justify-center text-center self-center mt-20"
         >
           <p className="text-left mb-8">
             And that is all to cover about this series. I hope you enjoyed the
