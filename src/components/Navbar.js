@@ -1,14 +1,33 @@
 import { Link } from "react-router-dom"
 import { useEffect, useState } from "react"
+import { auth } from "../firebase"
 import darkMode from "../assets/darkmode.png"
+import { onAuthStateChanged } from "firebase/auth"
 
 function Navbar() {
   useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setIsLoggedIn(true)
+      }
+    })
+
     const savedTheme = localStorage.getItem("theme")
     if (savedTheme) {
       document.documentElement.classList.add(savedTheme)
     }
+
+    return () => {
+      unsubscribe()
+    }
   }, [])
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+  const logout = () => {
+    auth.signOut()
+    setIsLoggedIn(false)
+  }
 
   const toggleTheme = () => {
     const currentTheme = document.documentElement.classList.contains("dark")
@@ -56,14 +75,23 @@ function Navbar() {
         </div>
       </div>
       <button
-        className="absolute lg:right-48 right-24 w-8 bg-white rounded-full p-1"
+        className="absolute lg:right-72 right-40 w-8 bg-white rounded-full p-1"
         onClick={toggleTheme}
       >
         <img src={darkMode} alt="" />
       </button>
-      <Link to="/contact" className="absolute lg:right-16 right-4">
+      <Link to="/contact" className="absolute lg:right-40 right-20">
         Contact
       </Link>
+      {isLoggedIn ? (
+        <Link onClick={logout} className="absolute lg:right-16 right-4">
+          Logout
+        </Link>
+      ) : (
+        <Link to="/login" className="absolute lg:right-16 right-4">
+          Login
+        </Link>
+      )}
     </div>
   )
 }

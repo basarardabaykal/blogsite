@@ -5,6 +5,8 @@ import Navbar from "./components/Navbar"
 import Home from "./pages/Home"
 import Litchi from "./pages/Litchi"
 import Contact from "./pages/Contact"
+import Signup from "./pages/Signup"
+import Login from "./pages/Login"
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/litchi-hikari-club" element={<Litchi />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="signup" element={<Signup />} />
+        <Route path="login" element={<Login />} />
       </Routes>
     </Router>
   )
