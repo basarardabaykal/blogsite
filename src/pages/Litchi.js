@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import Comment from "../components/Comment"
 import Video from "../components/Video"
 import ImgWithText from "../components/ImgWithText"
 import maruo from "../assets/maruo.png"
@@ -9,7 +10,7 @@ import litchiManga from "../assets/litchimanga.jpg"
 
 function Litchi() {
   return (
-    <div className="bg-yellow-50 dark:bg-black dark:text-yellow-50 flex justify-center lg:text-xl text-lg">
+    <div className="items-center flex-col bg-yellow-50 dark:bg-black dark:text-yellow-50 flex justify-center lg:text-xl text-lg">
       <main className="flex flex-col justify-center text-center pb-36 lg:w-3/5 w-4/5">
         <div
           id="introduction"
@@ -183,6 +184,7 @@ function Litchi() {
           </p>
         </div>
       </main>
+      <Comment></Comment>
     </div>
   )
 }
